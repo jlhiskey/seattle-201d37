@@ -34,13 +34,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
- var total = a * b;
- var arr = [];
- arr.push(total);
- var msg = 'The product of ' + a + ' and ' + b + ' is ' + total + '.';
- arr.push(msg);
+  var total = a * b;
+  var arr = [];
+  arr.push(total);
+  var msg = 'The product of ' + a + ' and ' + b + ' is ' + total + '.';
+  arr.push(msg);
 
- return arr;
+  return arr;
 
 }
 
@@ -62,11 +62,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var arr = [];
+  var totalSumOne = sum(a,b);
+  var totalSumTwo = sum(totalSumOne[0], c);
+  var totalProductOne = multiply(a, b);
+  var totalProductTwo = multiply(totalProductOne[0], c);
+  var Sum = a + ' and ' + b + ' and ' + c + ' sum to ' + totalSumTwo[0] + '.';
+  var Multiply = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalProductTwo[0] + '.';
+  arr.push(totalSumTwo[0]);
+  arr.push(totalProductTwo[0]);
+  arr.push(Sum);
+  arr.push(Multiply);
 
+  return arr;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -83,13 +95,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
-}
-
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+function sumArray(sumArr) {} //eslint-disable-line
+ //testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
